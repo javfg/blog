@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="posts">
+  <ul>
+    {% for page in paginator.pages %}
+    <li>
+      <a href="{{ page.permalink | safe }}" draggable="false">
+        {% if page.extra.thumb %}
+        {% set thumb_path = page.path ~ page.extra.thumb %}
+        {% set thumb = resize_image(path=thumb_path, width=256, height=128, format="webp",
+        quality=config.extra.webp_quality)
+        %}
+        <img alt="{{ page.title }}" src="{{ thumb.url }}" />
+        {% else %}
+        <div class="image-placeholder"></div>
+        {% endif %}
+        <div class="snippet">
+          <h2>{{ page.title }}</h2>
+          {{page.date}}
+          <br />
+          {{page.summary | safe}}
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% if paginator.number_pagers > 1 %}
+  <nav class="pagination">
+    <a class="button{% if not paginator.previous %} disabled{% endif %}" href="{{ paginator.first }}">&lt;&lt;</a>
+    <a class="button{% if not paginator.previous %} disabled{% endif %}" href="{{ paginator.previous }}">&lt;</a>
+    <span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+    <a class="button{% if not paginator.next %} disabled{% endif %}" href="{{ paginator.next }}">&gt;</a>
+    <a class="button{% if not paginator.next %} disabled{% endif %}" href="{{ paginator.last }}">&gt;&gt;</a>
+  </nav>
+  {% endif %}
+</section>
+{% endblock content %}

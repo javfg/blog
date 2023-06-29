@@ -1,0 +1,31 @@
+header {
+  padding: $size-md $size-xl;
+  border-bottom: $size-xs solid $primary;
+  color: $primary-dark;
+  background-color: $primary-light;
+
+  @media (max-width: $breakpoint-phone) {
+    padding: $size-md $size-xs;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  p {
+    margin: 0 5rem;
+  }
+
+  .title {
+    color: $primary;
+
+    &:hover {
+      color: $primary;
+      background-color: transparent;
+    }
+
+    &:focus-visible {
+      color: $primary-light;
+      background-color: $primary;
+    }
+  }
+}

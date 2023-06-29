@@ -1,0 +1,41 @@
+.rss {
+  margin: $size-lg;
+
+  aside {
+    @include box();
+    max-width: 768px;
+    margin-bottom: $size-xl;
+    padding: $size-sm;
+  }
+
+  a {
+    width: fit-content;
+  }
+
+  h1 {
+    margin-bottom: $size-md;
+
+    img {
+      height: 2.5rem;
+    }
+  }
+
+  .indented {
+    margin-left: $size-md;
+  }
+
+  .oneliner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: $size-md;
+    }
+  }
+}

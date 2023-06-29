@@ -1,0 +1,15 @@
+<div class="post-img-container" onclick="handleImageClick('{{ src }}')">
+  {% if not alt %}
+  {% set alt = subtext %}
+  {% endif %}
+  {% set webp_path = src %}
+  {% set webp = resize_image(path=page.path ~ src, op="fit_height", height=1080, format="webp",
+  quality=config.extra.webp_quality) %}
+  <img src="{{ webp.url }}" alt="{{ alt }}" />
+  <p>{{ subtext }}</p>
+</div>
+<div id="{{ src }}-popup" class="popup-overlay hidden" onclick="handleImageHide('{{ src }}')">
+  <div class="popup-img-container">
+    <img src="{{ webp.url }}" alt="{{ alt }}" />
+  </div>
+</div>

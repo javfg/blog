@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  background-color: $bg;
+  font-family: 'Miosevka Aile', Courier, monospace;
+}
+
+code {
+  font-family: 'Miosevka', Courier, monospace;
+}
+
+a {
+  padding-right: 1px; // hover is missing one pixel on the left
+  color: $primary;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    color: $bg;
+    background-color: $primary;
+  }
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: $size-xl;
+}
+
+h2 {
+  font-size: $size-lg;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+section {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.button {
+  @include pushable($primary, $primary-light);
+}

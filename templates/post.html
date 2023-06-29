@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="post">
+  <script type="text/javascript" src="/js/imagePopup.js"></script>
+
+  <article>
+    <h2 class="title">
+      {{ page.title }}
+    </h2>
+    <p><strong>{{ page.date }}</strong></p>
+
+    {{ page.content | safe }}
+
+    <br><br>
+    Back to:
+    <a href="#">top</a>
+    /
+    <a href="/">home</a>
+  </article>
+
+  <script type="text/javascript" src="/js/clipboardSnippet.js"></script>
+</section>
+
+
+{% endblock content %}

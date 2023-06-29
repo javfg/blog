@@ -1,0 +1,147 @@
+section.post {
+  article {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: $size-xl;
+
+    @media (max-width: $breakpoint-phone) {
+      padding: $size-xl $size-md;
+    }
+
+    pre {
+      @include box($primary-light, $primary-light);
+      max-width: 75vw;
+      margin: $size-xl auto;
+      padding: $size-sm;
+
+      @media (max-width: $breakpoint-phone) {
+        margin: $size-xl auto;
+        max-width: 85vw;
+        min-height: 1.2rem;
+        font-size: 0.66rem;
+      }
+
+      code {
+        display: block;
+        overflow-x: auto;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: right;
+
+        button {
+          border: none;
+          background-color: transparent;
+          color: $bg;
+
+          &:focus-visible,
+          &:hover {
+            background-color: $primary-light;
+            color: $blk;
+            outline: none;
+          }
+
+          &:active {
+            background-color: $primary;
+            color: $bg;
+          }
+        }
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      table td {
+        padding: 0;
+      }
+
+      table td:first-child {
+        text-align: right;
+        user-select: none;
+
+        &:not(:has(mark)) {
+          padding-right: $size-xs;
+        }
+
+        mark {
+          padding-right: $size-xs;
+          color: $bg-light;
+          font-weight: bold;
+        }
+      }
+
+      table td span::selection {
+        background-color: $primary;
+      }
+
+      mark {
+        display: block;
+        color: #d4be98;
+      }
+    }
+
+    p {
+      code {
+        position: relative;
+        z-index: 1;
+        color: darken(gray, 25%);
+        cursor: pointer;
+
+        &::before,
+        &::after {
+          content: '`';
+        }
+
+        &:hover::after {
+          content: '`';
+        }
+
+        .tooltip {
+          position: absolute;
+          top: -25px;
+          left: 0px;
+          visibility: hidden;
+          width: calc(100% - $size-sm);
+          padding: $size-xs;
+          background-color: $primary-light;
+          font-weight: bold;
+          text-align: center;
+          box-shadow: $size-sm $size-sm 0 0 $primary-dark;
+          user-select: none;
+        }
+
+        &:hover {
+          min-width: inherit;
+          padding: $size-xs 0;
+          color: $primary-dark;
+          background-color: $primary-light;
+          box-shadow: $size-sm $size-sm 0 0 $primary-dark;
+
+          &:active,
+          &:active .tooltip {
+            background-color: $warning;
+          }
+
+          .tooltip {
+            z-index: -1;
+            visibility: visible;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    #continue-reading {
+      display: block;
+      width: $size-md;
+      margin: $size-xl auto;
+      border: none;
+      border-bottom: 4px dotted $primary-dark;
+    }
+  }
+}

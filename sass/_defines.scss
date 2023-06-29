@@ -1,0 +1,44 @@
+// Colors
+$blk: #282828;
+
+$bg: #fff3d0;
+$bg-dark: #6d5e32;
+$bg-light: #fff7e0;
+
+$primary: #16445e;
+$primary-dark: #0c1d27;
+$primary-light: #7797a7;
+
+$warning: #e78a4e;
+$alert: #fb7567;
+
+// Sizes
+$size-ul: 5rem;
+$size-xl: 3rem;
+$size-lg: 2rem;
+$size-md: 1rem;
+$size-sm: 0.5rem;
+$size-xs: 0.25rem;
+
+// Times
+$time-quick: 25ms;
+$time-mid: 125ms;
+
+// Breakpoints
+$breakpoint-phone: 768px;
+
+// Quasiproportional font
+@font-face {
+  font-family: 'Miosevka Aile';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Miosevka Aile'), url('fonts/miosevka-aile.woff2') format('woff2');
+}
+
+// Monospaced font
+@font-face {
+  font-family: 'Miosevka';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Miosevka'), url('fonts/miosevka.woff2') format('woff2');
+}

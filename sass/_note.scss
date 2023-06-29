@@ -1,0 +1,39 @@
+@use 'sass:color';
+
+pre {
+  + .post-note-container {
+    position: relative;
+    max-width: 75vw;
+    margin: -3rem auto $size-xl auto;
+    padding: 0.5rem;
+    border: $size-xs solid #7797a7;
+    border-top: none;
+
+    @media (max-width: $breakpoint-phone) {
+      max-width: 85vw;
+    }
+  }
+}
+
+.post-note-container {
+  max-width: 75vw;
+  margin: $size-xl auto;
+  padding: $size-sm;
+
+  @media (max-width: $breakpoint-phone) {
+    margin: $size-xl auto;
+    max-width: 85vw;
+  }
+}
+
+.info {
+  @include box($primary-light);
+}
+
+.warning {
+  @include box($warning);
+}
+
+.alert {
+  @include box($alert);
+}

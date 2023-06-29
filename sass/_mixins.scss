@@ -1,0 +1,39 @@
+@use 'sass:color';
+
+@mixin box($bg-color: $bg-light, $border-color: color.scale($bg-color, $lightness: -50%)) {
+  border: $size-xs solid $border-color;
+  background-color: $bg-color;
+  box-shadow: $size-sm $size-sm 0 0 $blk;
+}
+
+@mixin pushable($bg-color: $bg-light, $border-color: color.scale($bg-color, $lightness: -50%)) {
+  @include box($bg-color, $border-color);
+
+  &:focus-visible {
+    border: $size-xs solid $border-color;
+    outline: none;
+    background-color: darken($bg-color, 10%);
+  }
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+
+  &:active {
+    transform: translateX($size-sm) translateY($size-sm);
+    transition: transform $time-quick ease-in-out;
+    box-shadow: none;
+  }
+
+  &.disabled {
+    color: desaturate($primary, 100%);
+    background-color: desaturate($primary-light, 100%);
+    border-color: desaturate($primary, 100%);
+    pointer-events: none;
+
+    &:focus-visible {
+      background-color: desaturate($color: $bg-color, $amount: 50%);
+      border-color: desaturate(darken($border-color, 20%), $amount: 50%);
+    }
+  }
+}
