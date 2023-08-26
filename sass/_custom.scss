@@ -1,0 +1,26 @@
+.compression-comparison {
+  display: flex;
+  justify-content: space-between;
+  width: calc(800px + $size-xs);
+  margin: $size-xl auto;
+  padding: 0.25rem;
+  background-color: $primary-light;
+  box-shadow: $size-sm $size-sm 0 0 $primary-dark;
+
+  img {
+    width: 400px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    flex-direction: column;
+    width: 90%;
+
+    img {
+      width: 100%;
+    }
+  }
+}

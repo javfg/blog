@@ -8,10 +8,14 @@
       <a href="{{ page.permalink | safe }}" draggable="false">
         {% if page.extra.thumb %}
         {% set thumb_path = page.path ~ page.extra.thumb %}
-        {% set thumb = resize_image(path=thumb_path, width=256, height=128, format="webp",
-        quality=config.extra.webp_quality)
-        %}
-        <img alt="{{ page.title }}" src="{{ thumb.url }}" />
+        {% set thumb_jpeg = resize_image(path=thumb_path, width=256, height=128, format="jpeg",
+        quality=config.extra.jpeg_quality) %}
+        {% set thumb_webp = resize_image(path=thumb_path, width=256, height=128, format="webp",
+        quality=config.extra.webp_quality) %}
+        <picture>
+          <source srcset="{{ thumb_webp.url }}" type="image/webp">
+          <img src="{{ thumb_jpeg.url }}" alt="{{ page.title }}" type="image/jpg" />
+        </picture>
         {% else %}
         <div class="image-placeholder"></div>
         {% endif %}

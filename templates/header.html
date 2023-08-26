@@ -1,8 +1,20 @@
 <header>
   <h1>
     <a href="/" class="title">
-      {{-config.title-}}
+      {{- config.title -}}
     </a>
   </h1>
-  <p>{{-config.description-}}</p>
+  <p></p>
 </header>
+
+<script type="application/javascript">
+  const subtitles = [];
+
+  {% for subtitle in config.extra.subtitles %}
+  subtitles.push('{{ subtitle }}');
+  {% endfor %}
+
+  const randomSubtitle = subtitles[Math.floor(Math.random() * subtitles.length)];
+  const p = document.querySelector("header p");
+  p.innerHTML = randomSubtitle;
+</script>

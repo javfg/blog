@@ -2,7 +2,6 @@
 
 pre {
   + .post-note-container {
-    position: relative;
     max-width: 75vw;
     margin: -3rem auto $size-xl auto;
     padding: 0.5rem;
@@ -21,8 +20,8 @@ pre {
   padding: $size-sm;
 
   @media (max-width: $breakpoint-phone) {
-    margin: $size-xl auto;
     max-width: 85vw;
+    margin: $size-xl auto;
   }
 }
 

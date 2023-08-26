@@ -23,14 +23,14 @@ section.posts {
           width: 256px;
         }
 
+        p {
+          margin-bottom: 0;
+        }
+
         @media (max-width: $breakpoint-phone) {
           .image-placeholder {
             display: none;
           }
-        }
-
-        p {
-          margin-bottom: 0;
         }
 
         @media (max-width: $breakpoint-phone) {

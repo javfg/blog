@@ -1,6 +1,5 @@
 .post-img-container {
   @include pushable($bg-light, $bg-dark);
-
   display: flex;
   flex-direction: column;
   height: 50%;
@@ -8,51 +7,26 @@
   margin: $size-ul auto;
   cursor: pointer;
 
-  @media (max-width: $breakpoint-phone) {
-    height: 90%;
-    width: 90%;
-    pointer-events: none;
+  a {
+    padding: 0;
+  }
+
+  picture {
+    display: block;
+    line-height: 0;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
   }
 
   p {
-    margin: $size-xs 0;
     text-align: center;
   }
-}
 
-.popup-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  overflow-y: hidden;
-  backdrop-filter: brightness(40%);
-
-  &.hidden {
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity $time-mid ease-in-out, visibility $time-mid ease-in-out;
-  }
-
-  &.visible {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity $time-mid ease-in-out, visibility $time-mid ease-in-out;
-  }
-
-  .popup-img-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-
-    img {
-      max-height: 90vh;
-      max-width: 90vw;
-    }
+  @media (max-width: $breakpoint-phone) {
+    height: 90%;
+    width: 90%;
   }
 }

@@ -4,8 +4,11 @@ section.post {
     margin: 0 auto;
     padding: $size-xl;
 
-    @media (max-width: $breakpoint-phone) {
-      padding: $size-xl $size-md;
+    hr {
+      height: $size-xs;
+      margin: $size-xl 0;
+      border: none;
+      background-color: $primary;
     }
 
     pre {
@@ -13,13 +16,6 @@ section.post {
       max-width: 75vw;
       margin: $size-xl auto;
       padding: $size-sm;
-
-      @media (max-width: $breakpoint-phone) {
-        margin: $size-xl auto;
-        max-width: 85vw;
-        min-height: 1.2rem;
-        font-size: 0.66rem;
-      }
 
       code {
         display: block;
@@ -32,19 +28,19 @@ section.post {
 
         button {
           border: none;
-          background-color: transparent;
           color: $bg;
+          background-color: transparent;
 
           &:focus-visible,
           &:hover {
-            background-color: $primary-light;
-            color: $blk;
             outline: none;
+            color: $blk;
+            background-color: $primary-light;
           }
 
           &:active {
-            background-color: $primary;
             color: $bg;
+            background-color: $primary;
           }
         }
       }
@@ -59,15 +55,16 @@ section.post {
       }
 
       table td:first-child {
+        width: 1.5rem;
         text-align: right;
         user-select: none;
 
         &:not(:has(mark)) {
-          padding-right: $size-xs;
+          padding-right: $size-sm;
         }
 
         mark {
-          padding-right: $size-xs;
+          padding-right: $size-sm;
           color: $bg-light;
           font-weight: bold;
         }
@@ -81,58 +78,29 @@ section.post {
         display: block;
         color: #d4be98;
       }
+
+      @media (max-width: $breakpoint-phone) {
+        min-height: 1.2rem;
+        max-width: 85vw;
+        margin: $size-xl auto;
+        font-size: 0.66rem;
+      }
     }
 
     p {
       code {
-        position: relative;
-        z-index: 1;
         color: darken(gray, 25%);
-        cursor: pointer;
 
         &::before,
         &::after {
           content: '`';
         }
+      }
+    }
 
-        &:hover::after {
-          content: '`';
-        }
-
-        .tooltip {
-          position: absolute;
-          top: -25px;
-          left: 0px;
-          visibility: hidden;
-          width: calc(100% - $size-sm);
-          padding: $size-xs;
-          background-color: $primary-light;
-          font-weight: bold;
-          text-align: center;
-          box-shadow: $size-sm $size-sm 0 0 $primary-dark;
-          user-select: none;
-        }
-
-        &:hover {
-          min-width: inherit;
-          padding: $size-xs 0;
-          color: $primary-dark;
-          background-color: $primary-light;
-          box-shadow: $size-sm $size-sm 0 0 $primary-dark;
-
-          &:active,
-          &:active .tooltip {
-            background-color: $warning;
-          }
-
-          .tooltip {
-            z-index: -1;
-            visibility: visible;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-        }
+    a:hover {
+      code {
+        color: $bg;
       }
     }
 
@@ -142,6 +110,10 @@ section.post {
       margin: $size-xl auto;
       border: none;
       border-bottom: 4px dotted $primary-dark;
+    }
+
+    @media (max-width: $breakpoint-phone) {
+      padding: $size-xl $size-md;
     }
   }
 }

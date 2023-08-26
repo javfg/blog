@@ -30,15 +30,15 @@ $breakpoint-phone: 768px;
 // Quasiproportional font
 @font-face {
   font-family: 'Miosevka Aile';
-  font-style: normal;
   font-weight: normal;
+  font-style: normal;
   src: local('Miosevka Aile'), url('fonts/miosevka-aile.woff2') format('woff2');
 }
 
 // Monospaced font
 @font-face {
   font-family: 'Miosevka';
-  font-style: normal;
   font-weight: normal;
+  font-style: normal;
   src: local('Miosevka'), url('fonts/miosevka.woff2') format('woff2');
 }

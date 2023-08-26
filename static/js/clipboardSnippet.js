@@ -1,21 +1,3 @@
-document.querySelectorAll('p code').forEach(e => {
-  const text = e.childNodes[0].textContent;
-  e.addEventListener('click', () => {
-    navigator.clipboard.writeText(text);
-    e.childNodes[1].textContent = 'OK';
-  });
-
-  e.addEventListener('mouseout', () => {
-    e.childNodes[1].textContent = 'Copy';
-  });
-
-  const tooltip = document.createElement('span');
-  tooltip.classList.add('tooltip');
-  tooltip.innerText = 'Copy';
-
-  e.appendChild(tooltip);
-});
-
 document.querySelectorAll('article pre').forEach(e => {
   const buttonContainer = document.createElement('div');
   buttonContainer.classList.add('button-container');

@@ -2,14 +2,16 @@
 
 * Hide image placeholder in small breakpoints
 * favicon
+* image using picture element
+* image to avif/webp
 
 ---
 
 
 # Basic stuff to do
 
-* image using picture element with multiple resolutions
 * conditional load of scripts
+* big image like webp
 
 
 # More advanced
@@ -18,4 +20,4 @@
 * search
 * links in navbar
 * archive by date?
-* image to avif/webp
+* images with multiple resolutions
