@@ -12,12 +12,14 @@ did with FontTool's
 example](https://xeiaso.net/blog/iaso-fonts).
 
 It does not have many features so far, as the idea is to keep adding more when
-the need arises. But so far, it includes:
+the need arises. Right now, it includes:
 
 * Post list pagination
 * Code snippets with copy to clipboard function
 * Auto image resizing and WebP conversion
 * A cool [RSS feed](https://blog.meneillos.com/atom.xml) using XSL styles!
+
+Head to [TODO.md](TODO.md) for a list of this I plan to add eventually.
 
 Feel free to use this as inspiration to create your own blog (or just copy it
 without mercy).

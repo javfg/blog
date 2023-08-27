@@ -8,16 +8,11 @@
 ---
 
 
-# Basic stuff to do
+# Pending (no prority order)
 
 * conditional load of scripts
-* big image like webp
-
-
-# More advanced
-
+* source image also webp
 * tags
 * search
 * links in navbar
-* archive by date?
-* images with multiple resolutions
+* archive by date
