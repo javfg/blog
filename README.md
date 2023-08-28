@@ -19,7 +19,7 @@ the need arises. Right now, it includes:
 * Auto image resizing and WebP conversion
 * A cool [RSS feed](https://blog.meneillos.com/atom.xml) using XSL styles!
 
-Head to [TODO.md](TODO.md) for a list of this I plan to add eventually.
+Head to [TODO.md](TODO.md) for a list of things I plan to add eventually.
 
 Feel free to use this as inspiration to create your own blog (or just copy it
 without mercy).
