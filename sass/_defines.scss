@@ -33,6 +33,7 @@ $breakpoint-phone: 768px;
   font-weight: normal;
   font-style: normal;
   src: local('Miosevka Aile'), url('fonts/miosevka-aile.woff2') format('woff2');
+  font-display: swap;
 }
 
 // Monospaced font
@@ -41,4 +42,5 @@ $breakpoint-phone: 768px;
   font-weight: normal;
   font-style: normal;
   src: local('Miosevka'), url('fonts/miosevka.woff2') format('woff2');
+  font-display: swap;
 }
