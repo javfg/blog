@@ -32,7 +32,7 @@ $breakpoint-phone: 768px;
   font-family: 'Miosevka Aile';
   font-weight: normal;
   font-style: normal;
-  src: local('Miosevka Aile'), url('fonts/miosevka-aile.woff2') format('woff2');
+  src: local('Miosevka Aile'), url('/fonts/miosevka-aile.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -41,6 +41,6 @@ $breakpoint-phone: 768px;
   font-family: 'Miosevka';
   font-weight: normal;
   font-style: normal;
-  src: local('Miosevka'), url('fonts/miosevka.woff2') format('woff2');
+  src: local('Miosevka'), url('/fonts/miosevka.woff2') format('woff2');
   font-display: swap;
 }
