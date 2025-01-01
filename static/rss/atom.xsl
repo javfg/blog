@@ -63,6 +63,12 @@
                 <small>
                   <xsl:value-of select="substring(atom:updated, 0, 11)" />
                 </small>
+                <p>
+                  <xsl:value-of select="atom:summary" />
+                </p>
+                <div class="hidden">
+                  <xsl:value-of select="atom:content" />
+                </div>
               </li>
             </xsl:for-each>
           </ul>

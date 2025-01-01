@@ -16,3 +16,4 @@
 * search
 * links in navbar
 * archive by date
+* per-mimetype cache policy
