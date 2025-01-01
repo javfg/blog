@@ -7,7 +7,7 @@ if [ ! -d "scripts" ]; then
 fi
 
 DATE=$(date +"%Y-%m-%d")
-NEW_POST=$(date +"%Y-%m-%d")-${1:-untitled}
+NEW_POST=$DATE-${1:-untitled}
 
 mkdir -p content/"$NEW_POST"
 cat > content/"$NEW_POST"/index.md <<EOF

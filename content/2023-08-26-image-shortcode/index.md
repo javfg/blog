@@ -2,7 +2,7 @@
 title = "A simple image shortcode for Zola"
 date = 2023-08-26
 [taxonomies]
-tags = ["personal", "frontend"]
+tags = ["blog"]
 [extra]
 thumb = "cato.jpg"
 +++

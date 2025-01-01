@@ -2,7 +2,7 @@
 title = "Set yourself some deadlines"
 date = 2023-07-01
 [taxonomies]
-tags=["personal", "frontend"]
+tags=["personal"]
 [extra]
 # thumb = "zola.png"
 +++
