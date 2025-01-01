@@ -19,6 +19,10 @@ the need arises. Right now, it includes:
 * Auto image resizing and WebP conversion
 * A cool [RSS feed](https://blog.meneillos.com/atom.xml) using XSL styles!
 
+It does, however, have a very straightforward way to author and publish new
+posts. Just run `make author` and `make publish` respectively. These commands
+require some setup. I will write a blog post about it _soon_. ;)
+
 Head to [TODO.md](TODO.md) for a list of things I plan to add eventually.
 
 Feel free to use this as inspiration to create your own blog (or just copy it
